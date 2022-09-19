@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let auto1 = {
+        _przebieg: 0,
+        _kolor: "",
+      };
+      Object.defineProperty(auto1, "przebieg", {
+        get: function () {
+          return this._przebieg;
+        },
+        set: function (value) {
+          if (typeof value == "number") this._przebieg = value;
+          else this._przebieg = "error!";
+        },
+      });
+      Object.defineProperty(auto1, "kolor", {
+        get: function () {
+          return this._kolor;
+        },
+        set: function (value) {
+          if (typeof value == "string") this._kolor = value;
+          else this._kolor = "error!";
+        },
+      });
+
+      auto1.przebieg = "20";
+      auto1.kolor = "czerwony";
+
+      console.log(auto1);
+
+      console.log("przebieg: %s, kolor: %s", auto1.przebieg, auto1.kolor);
+
+      auto1.przebieg = 20000;
+      console.log("przebieg: %s, kolor: %s", auto1.przebieg, auto1.kolor);
+    </script>
+  </body>
+</html>

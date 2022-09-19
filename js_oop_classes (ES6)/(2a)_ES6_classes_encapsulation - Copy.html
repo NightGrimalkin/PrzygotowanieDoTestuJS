@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Auto {
+          constructor(przebieg, kolor) {
+            if (typeof przebieg == "number") this._przebieg = przebieg;
+            else console.log("Błędna wartość przebiegu");
+            if (typeof kolor == "string") this._kolor = kolor;
+            else console.log("Błędna wartość koloru");
+          }
+          getPrzebieg() {
+            return this._przebieg;
+          }
+  
+          getKolor() {
+            return this._kolor;
+          }
+  
+          setPrzebieg(val) {
+            if (typeof val == "number") this._przebieg = val;
+            else console.log("Błędna wartość przebiegu");
+          }
+  
+          setKolor(val) {
+            if (typeof val == "string") this._kolor = val;
+            else console.log("Błędna wartość koloru");
+          }
+        }
+        const auto1 = new Auto("200000", "czerwone");
+  
+        console.log(
+          "przebieg: %s, kolor: %s",
+          auto1.getPrzebieg(), 
+          auto1.getKolor() 
+        );
+  
+        auto1.setPrzebieg(200000);
+        console.log(
+          "przebieg: %s, kolor: %s",
+          auto1.getPrzebieg(), 
+          auto1.getKolor() 
+        );
+      </script>
+</body>
+</html>

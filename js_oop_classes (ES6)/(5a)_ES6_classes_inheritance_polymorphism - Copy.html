@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      class Osoba {
+        constructor(imie, nazwisko) {
+          this._imie = imie;
+          this._nazwisko = nazwisko;
+        }
+        dane() {
+          return `imię: ${this._imie}, nazwisko: ${this._nazwisko}`;
+        }
+      }
+
+      class Pracownik extends Osoba {
+        constructor(imie, nazwisko, zawod) {
+          super(imie, nazwisko);
+          this._zawod = zawod;
+        }
+        dane() {
+          return `${super.dane()}, zawod: ${this._zawod}`;
+        }
+      }
+
+      class Dziecko extends Osoba {
+        constructor(imie, nazwisko, wiek) {
+          super(imie, nazwisko);
+          this._wiek = wiek;
+        }
+        dane() {
+          return `${super.dane()}, wiek: ${this._wiek}`;
+        }
+      }
+
+      class Emeryt extends Pracownik {
+        constructor(imie, nazwisko, zawod, wiek) {
+          super(imie, nazwisko, zawod);
+          this._wiek = wiek;
+        }
+
+        dane() {
+          return `${super.dane()}, wiek: ${this._wiek}`;
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <script>
+      const pracownik = new Pracownik("Mateusz", "Szczepkowski", "programista");
+      console.log(pracownik.dane());
+
+      const emeryt = new Emeryt("Tadeusz", "Szczepkowski", "kierowca", 70);
+      console.log(emeryt.dane());
+    </script>
+  </body>
+</html>

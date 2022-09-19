@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Auto{
+            constructor(przebieg, kolor){
+                this._przebieg=przebieg;
+                this._kolor=kolor;
+            }
+            daneAuto() {
+                return `Przebieg: ${this._przebieg}, kolor: ${this._kolor}`;
+            }  
+            danePrzebieg = function() {
+                return this._przebieg;
+            }
+            daneKolor = function() {
+                return this._kolor;
+            }
+        }
+        const auto1 = new Auto(200000,"czerwone");
+      
+        console.log(`auto1.daneAuto(): ${auto1.daneAuto()}`);
+        console.log(`auto1.danePrzebieg(): ${auto1.danePrzebieg()}`);
+        console.log(`auto1.daneKolor(): ${auto1.daneKolor()}`);
+    </script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!--JavaScript ES6
+    Funkcje strzałkowe vs. konstruktory obiektów.
+    Funkcje strzałkowe vs. metody obiektów.
+
+    © Piotr Siewniak, wersja: 4.VIII.2021 r.
+-->
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <title>JAVASCRIPT: FUNKCJE STRZAŁKOWE</title>
+    <meta charset="UTF-8" />
+  </head>
+  <body>
+    <script>
+    function Czlowiek1() {
+        this.wiek = 10;
+        this.waga = 50;
+        this.wyswietlDane = function () {
+          console.log(this.wiek + " " + this.waga);
+        };
+      }
+
+      const czlowiek1 = new Czlowiek1();
+      czlowiek1.wyswietlDane();
+
+      const Czlowiek2 = () => {
+        this.wiek = 10;
+        this.waga = 50;
+        this.wyswietlDane = function () {
+          console.log(this.wiek + " " + this.waga);
+        };
+      };
+      //let czlowiek2 = new Czlowiek2;
+
+      const czlowiek3 = {
+        wiek: 10,
+        waga: 50,
+        wyswietlDane: () => {
+          console.log(this.wiek , this.waga);
+        },
+        info() {
+          console.log("Komunikat zwrotny z obiektu auto3 ...");
+        },
+      }
+      
+      czlowiek3.wyswietlDane();
+      czlowiek3.info();
+    </script>
+  </body>
+</html>

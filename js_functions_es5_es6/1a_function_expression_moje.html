@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      console.log(`func(): ${func(1)}`);
+
+      const func_ = func;
+      console.log(`func_(): ${func_(2)}`);
+
+      function func(a) {
+        return a;
+      }
+
+      const func2 = function (a) {
+        return a;
+      };
+
+      console.log(`func2(): ${func2(3)}`);
+
+      let func2_ = func2;
+      console.log(`func2_(): ${func2(4)}`);
+
+      const func2__ = func2_(99);
+      console.log(`func2__(): ${func2__}`);
+    </script>
+  </body>
+</html>

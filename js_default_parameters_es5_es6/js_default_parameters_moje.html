@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function dane1(wiek, wzrost) {
+        return wiek + " " + wzrost;
+      }
+      console.log(`dane1: ${dane1(16, 150)} `);
+
+      function dane2a(wiek, wzrost) {
+        var wiek = wiek || 15;
+        var wzrost = wzrost || 160;
+
+        return wiek + " " + wzrost;
+      }
+      console.log(`dane1: ${dane2a()} `);
+
+      var dane2b = function (wiek, wzrost) {
+        var wiek = wiek || 14;
+        var wzrost = wzrost || 140;
+
+        return wiek + " " + wzrost;
+      };
+      console.log(`dane1: ${dane2b()} `);
+
+      function dane3a(wiek = 13, wzrost = 135) {
+        return wiek + " " + wzrost;
+      }
+      console.log(`dane1: ${dane3a()} `);
+
+      const dane3b = (wiek = 12, wzrost = 130) => {
+        return wiek + " " + wzrost;
+      };
+      console.log(`dane1: ${dane3b()} `);
+    </script>
+  </body>
+</html>

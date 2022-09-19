@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function funkcjaWyboru(liczba,funkcja){
+            return funkcja(liczba);
+        }
+
+        function funkcja1(liczba){
+            return liczba;
+        }
+        
+        function funkcja2(liczba){
+            return liczba+5;
+        }
+
+        console.log(`piewsza funkcja wywolana przez funkcje wyboru: ${funkcjaWyboru(1,funkcja1)}`);
+        console.log(`druga funkcja wywolana przez funkcje wyboru: ${funkcjaWyboru(1,funkcja2)}`);
+    </script>
+</body>
+</html>

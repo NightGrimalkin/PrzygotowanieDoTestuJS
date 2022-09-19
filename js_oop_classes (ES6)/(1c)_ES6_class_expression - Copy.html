@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const Prostokat = class {
+          static classInfo(){
+              return "Mateusz Szczepkowski";
+          }
+  
+          constructor(a, b) {
+            this._a = a;
+            this._b = b;
+            this.pole = function () {
+              return this._a * this._b;
+            };
+          }
+          obwod = function () {
+            return 2 * this._a + 2 * this._b;
+          };
+        };
+        console.log(Prostokat.classInfo());
+  
+        const prostokat = new Prostokat(2, 2);
+  
+        console.log(`this._a: ${prostokat._a}`);
+        console.log(`this._b: ${prostokat._b}`);
+        console.log(`prostokat.pole(): ${prostokat.pole()}`);
+        console.log(`prostokat.obwod(): ${prostokat.obwod()}`);
+      </script>
+</body>
+</html>

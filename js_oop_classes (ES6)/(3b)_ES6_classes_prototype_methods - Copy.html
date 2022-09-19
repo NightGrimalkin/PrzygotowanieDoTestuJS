@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      class Kwadrat {
+        constructor(a) {
+          this.bok = a;
+        }
+
+        get pole() {
+          return this.obliczPole();
+        }
+        get obwod() {
+          return this.obliczObwod();
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <script>
+      Kwadrat.prototype.obliczObwod = function () {
+        return 4 * this.bok;
+      };
+      Kwadrat.prototype.obliczPole = function () {
+        return this.bok * this.bok;
+      };
+
+      var kwadrat = new Kwadrat(1);
+
+      console.log("Bok kwadratu: %s", kwadrat.bok);
+      console.log("Pole kwadratu: %s", kwadrat.pole);
+      console.log("Obwód kwadratu: %s", kwadrat.obwod);
+    </script>
+  </body>
+</html>

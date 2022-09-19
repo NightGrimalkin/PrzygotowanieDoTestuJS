@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var literal1 =
+        "\n" + "Mam" + "\n" + "     na" + "\n" + "imię" + "\n" + "Mateusz";
+      console.log(`literal ${literal1}`);
+
+      var literal2 =
+        "\n \ Mam \n \               na \n \ imię \n \                  Mateusz";
+      console.log(`literal ${literal2}`);
+
+      var literal3 = ["Mam", "na", "imię", "Mateusz"].join("\n");
+      console.log(`literal ${literal3}`);
+
+      const literal4 = `
+      Mam
+        na
+            imię
+                Mateusz`;
+      console.log(`literal ${literal4}`);
+    </script>
+  </body>
+</html>

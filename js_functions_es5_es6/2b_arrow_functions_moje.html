@@ -1,0 +1,27 @@
+<!--JavaScript ES5:     wyrażenia funkcyjne (function expressions).
+    JavaScript ES6:     funkcje strzałkowe (arrow functions).
+
+    © Piotr Siewniak, wersja: 4.VIII.2021 r.
+-->
+
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <title>JavaScript: function expressions, arrow functions</title>
+    <meta charset="UTF-8" />
+  </head>
+  <body>
+    <script>
+      const PI = Math.PI;
+      const r = 5;
+
+      const poleKola = (PI, r) => PI * (r * r);
+      const obwodKola = (PI, r) => {
+        return 2 * PI * r;
+      };
+
+      console.log(`pole kola: ${poleKola(PI, r)}`);
+      console.log(`obwod kola: ${obwodKola(PI, r)}`);
+    </script>
+  </body>
+</html>
